@@ -118,4 +118,10 @@ main {
 .main_post_pic * {
   display: flex;
   border-radius: 5px;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 10px 30px;
+  background: #B4D4FF;
 }/*# sourceMappingURL=styles.css.map */
