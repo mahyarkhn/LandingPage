@@ -1,0 +1,60 @@
+body
+    background: #EEF5FF
+    margin: 0px
+    display: grid
+    grid-template-areas: "header header header header header" "main main main main main" "footer footer footer footer footer"
+    gap: 10px    
+
+.header 
+    background: #B4D4FF
+    max-height: 50px
+    padding: 2px
+    grid-area: header
+
+.header_container
+    display: grid
+    grid-template-areas: "logo logo nav nav account"
+    padding: 0px
+    border-color: blue
+    border-width: 2px
+
+.header_logo
+    height: 48px
+
+.header_nav
+    grid-area: nav
+    gap: 10px
+    justify-self: flex-start
+    align-self: center
+
+.header_nav_link
+    text-decoration: none
+    padding: 5px 10px
+    border: solid #86B6F6 1px
+    border-radius: 7px
+    background: #B4D4FF
+.header_nav_link:hover
+    transition: background
+    transition-duration: .2s
+    background: #86B6F6
+
+.header_nav_link-selected
+    background: #86B6F6
+
+.header_account
+    grid-area: account
+    gap: 10px
+    justify-self: center
+    align-self: center
+
+.header_account_login
+    text-decoration: none
+    padding: 5px 25px
+    border: solid #64c6ff 1px
+    border-radius: 5px
+    background: #64c6ff
+
+main
+    grid-area: main
+    padding: 5%
+
