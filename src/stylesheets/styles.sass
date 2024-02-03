@@ -1,22 +1,26 @@
+$bg1: #333333
+$bg2: #282828
+$bg3: #FFEA00
+$fg1: #FFD700
+
 body
-    background: #EEF5FF
+    background: $bg1
     margin: 0px
     display: grid
     grid-template-areas: "header header header header header" "main main main main main" "footer footer footer footer footer"
     gap: 10px    
 
 .header 
-    background: #B4D4FF
+    background: $bg2
     max-height: 50px
     padding: 2px
     grid-area: header
 
 .header_container
     display: grid
-    grid-template-areas: "logo logo nav nav account"
+    grid-template-areas: "logo blank blank blank nav account"
     padding: 0px
-    border-color: blue
-    border-width: 2px
+    border-bottom: solid #222222 1px
 
 .header_logo
     height: 48px
@@ -26,55 +30,91 @@ body
     gap: 10px
     justify-self: flex-start
     align-self: center
+    align-items: center
+    height: 100%
+
+    ul
+        display: flex
+        padding: 0
+        margin: 0
+        list-style: none
+
+    li
+        padding: 0 0px
+        height: 100%
+
+
+
+    
 
 .header_nav_link
+    display: flex
+    justify-content: center
     text-decoration: none
-    padding: 5px 10px
-    border: solid #86B6F6 1px
-    border-radius: 7px
-    background: #B4D4FF
+    padding: 15px 20px
+    border: solid $bg2 1px
+    border-radius: 3px
+    background: $bg2
+    text-decoration: none
+    color: white
+    font-weight: normal
+    white-space: nowrap
+
 .header_nav_link:hover
-    transition: background
     transition-duration: .2s
-    background: #86B6F6
+    background: $fg1
+    color: black
 
 .header_nav_link-selected
-    background: #86B6F6
+    color: $fg1
 
 .header_account
+
     grid-area: account
     gap: 10px
-    justify-self: center
+    justify-self: flex-end
     align-self: center
 
 .header_account_login
     text-decoration: none
-    padding: 5px 25px
-    border: solid #64c6ff 1px
+    padding: 15px 25px
+    border: none
     border-radius: 5px
-    background: #64c6ff
+    background: $bg3
 
 main
     grid-area: main
     padding: 5%
 
 .main_post
-    background: #d0e4ff
-    border: solid #B4D4FF 2px
+    background: #505050
+    border: solid $bg2 2px
     border-radius: 5px
     display: grid
     grid-template-areas: "data data data pic"
     gap: 5%
+    margin-bottom: 10px
+.a1
+    grid-area: a1
+
+.a2
+    grid-area: a2
+
+.a3
+    grid-area: a3
 
 .main_post_data
     grid-area: data
     display: grid
     grid-template-areas: "title" "desc" "link"
     padding: 10px 20px
+
 .main_post_title
     grid-area: title
+    color: white
     
 .main_post_desc
+    color: #FAFAFA
     grid-area: desc
     overflow: hidden
     text-overflow: ellipsis
@@ -85,9 +125,9 @@ main
 .main_post_link
     grid-area: link
     text-decoration: underline
-    border: solid cyan 2px
+    border: solid $bg3 2px
     border-radius: 5px
-    background: cyan
+    background: $bg3
     margin-top: 10px
     max-width: 120px
     text-align: center
@@ -102,7 +142,15 @@ main
         display: flex
         border-radius: 5px
 
+#main_loadmore
+    margin: 40px 0 0 0
+    background: $bg3
+    border: none
+    border-radius: 2px
+    padding: 10px 15px
+
 .footer
     grid-area: footer
     padding: 10px 30px
-    background: #B4D4FF
+    background: $bg2
+    color: $fg1
