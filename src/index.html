@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./stylesheets/styles.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <title>Home</title>
-    </head>
-    <body>
-        <header class="header">
-            <div class="header_container">
-                <div class="header_logo">
-                    <a href="#">
-                        <img class="header_logo" alt="logo" src="./imgs/logo.png"/>
-                    </a>
-                </div>
-                <nav class="header_nav">
-                    <ul>
-                        <li><a class="header_nav_link header_nav_link-selected" href="#">Home</a></li>
-                        <li><a class="header_nav_link"href="#">About us</a></li>
-                        <li><a class="header_nav_link"href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <nav class="header_account">
-                    
-                    <a class="header_account_login" href="#">Login</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/assets/css/bootstrap.css" />
+    <!-- <link rel="stylesheet" href="./stylesheets/styles.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img height="46" src="/src/assets/imgs/logo.png" alt="icon" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex me-2">
+            <a class="btn btn-sm btn-primary px-4 py-2" href="#">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-                </nav>
-            </div>
-        </header>
+    <div class="container-fluid my-4">
+      <div class="post_container row justify-content-center g-4">
+        
+      </div>
+      <div class="text-center" onclick="loadPosts()"><button class="btn btn-info mt-4" onclick="loadPosts()">Load more</button></div>
+    </div>
 
-        <main>
-            <div class="main_container">
-                
-            </div>
+    <footer class="container-fluid py-3 px-5 m-0 bg-body-tertiary">
+        &copy; 2024
+    </footer>
 
-            <center><button id="main_loadmore">Load More</button></center>
-
-            
-        </main>
-
-        <footer class="footer">
-            Copyright &copy; 2024
-        </footer>
-
-        <script src="./index.js"></script>
-    </body>
+    <script src="/src/assets/js/index.js"></script>
+    <script src="/src/assets/js/bootstrap.bundle.js"></script>
+  </body>
 </html>
